@@ -1,22 +1,9 @@
-#include <bits/stdc++.h>
-using namespace std;
-
-vector<int> final_arr;
-
-/*void printArray(vector<int> arr, int n)
-{
-
-    if (arr.size() <= 1)
-    {
-        final_arr.push_back(arr[0]);
-    }
-    else
-    {
-        final_arr.push_back(*min_element(arr.begin(), arr.end()));
-    }
-}
-*/
-
+// C++ code to print all possible 
+// subsequences for given array using 
+// recursion 
+#include <bits/stdc++.h> 
+using namespace std; 
+  
 void printArray(vector<int> arr, int n) 
 { 
     for (int i = 0; i < n; i++) 
@@ -24,7 +11,6 @@ void printArray(vector<int> arr, int n)
     cout << endl; 
 } 
   
-
 // Recursive function to print all 
 // possible subsequences for given array 
 void printSubsequences(vector<int> arr, int index,  
@@ -55,34 +41,17 @@ void printSubsequences(vector<int> arr, int index,
     } 
     return; 
 } 
-
-
-int main()
-{
-
-    vector<int> b;
-    int l, cle, t;
-    cin >> t;
-
-    while (t--)
-    {
-        cin >> l;
-        vector<int> arr;
-
-        for (int i = 0; i < l; i++)
-        {
-            cin >> cle;
-            arr.push_back(cle);
-        }
-
-        printSubsequences(arr, 0, b);
-        /*
-        for (int j = 0; j < final_arr.size(); j++)
-        {
-            cout << final_arr[j] << endl;
-        }
-        */
-    }
-
-    return 0;
-}
+  
+// Driver Code 
+int main() 
+{ 
+    vector<int> arr{1, 2, 3}; 
+    vector<int> b; 
+  
+    printSubsequences(arr, 0, b); 
+  
+    return 0; 
+} 
+  
+// This code is contributed by 
+// sanjeev2552 

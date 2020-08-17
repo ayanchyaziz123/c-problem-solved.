@@ -5,9 +5,7 @@ int main(){
 
     int a, b;
     int n, sum, sef, deth;
-
     cin>>n;
-
     for(int i=0; i<n; i++){
         sef = 0;
         deth = 0;
@@ -33,16 +31,7 @@ int main(){
         else
         {
             cout<<1<<endl;
-        }
-        
-
-        
-        
+        }  
     }
-
-
-
-
-
     return 0;
 }
