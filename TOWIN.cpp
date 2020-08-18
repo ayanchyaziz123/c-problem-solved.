@@ -20,44 +20,35 @@ int main()
             cin >> cle;
             arr.push_back(cle);
         }
-        int first = 0;
-        int second = 0;
+        int p1 = 0;
+        int p2 = 0;
 
-        for (int i = 0; i < n; i++)
+        p1 += arr[0];
+        p2 += arr[1] + arr[2];
+
+        for (int i = 3; i < arr.size(); i++)
         {
-            if (i == 0)
+            if (i % 2 != 0)
             {
-                first++;
-            }
-
-            else if ((i == 1) || (i == 2))
-            {
-                second++;
+                p1 += arr[i];
             }
             else
             {
-                if (i % 2 == 0)
-                {
-                    second++;
-                }
-                else
-                {
-                    first++;
-                }
+                p2 += arr[i];
             }
         }
 
-        if (first == second)
+        if (p1 > p2)
         {
-            cout << "draw" << endl;
+            cout << "first" << endl;
         }
-        else if (first < second)
+        else if (p1 < p2)
         {
             cout << "second" << endl;
         }
         else
         {
-            cout << "first" << endl;
+            cout << "draw" << endl;
         }
     }
 
