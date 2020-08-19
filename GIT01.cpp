@@ -18,10 +18,9 @@ int main()
 
             for (int j = 0; j < k - 1; j++){
                 if(cake[j] == cake[j+1]){
-                    if(cake[j-1] == 'R'){
+                    if(cake[j-1] == 'R' && cake[j+1] == 'R'){
 
-
-                    } 
+                   } 
 
                 }
 
